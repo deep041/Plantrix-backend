@@ -5,6 +5,7 @@ module.exports = new mongoose.Schema({
     description: { type: String, required: true },
     ownerId: { type: mongoose.Schema.Types.ObjectId, ref: 'user', required: true },
     collaborators: { type: [{ type: mongoose.Schema.Types.ObjectId, ref: 'user' }] },
+    logo: { type: String },
     status: { type: String, enum: ['active', 'inactive'], default: 'active' },
     startDate: { type: Date },
     endDate: { type: Date },

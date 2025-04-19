@@ -12,7 +12,8 @@ const addProject = async (req, res, next) => {
     let projectData = {
         name: req.body.name,
         description: req.body.description,
-        ownerId: new ObjectId(req.user.id)
+        ownerId: new ObjectId(req.user.id),
+        logo: req.body?.logo
     }
 
     project.create(projectData).then((result, err) => {
