@@ -16,6 +16,7 @@
     "joi": "^17.13.3",
     "jsonwebtoken": "^9.0.2",
     "mongoose": "^8.13.2",
+    "serverless-http": "^3.2.0",
     "winston": "^3.17.0"
   }
 }
