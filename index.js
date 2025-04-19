@@ -1,7 +1,7 @@
 require('dotenv').config();
 require('./config/db.config').connect();
 // const logger = require('./logger');
-const serverless = require('serverless-http');
+
 
 const express = require('express');
 const cors = require('cors');
@@ -24,8 +24,6 @@ app.get('/', (req, res) => {
 
 app.use('/', routes);
 
-// app.listen(PORT, () => {
-//     console.log(`App is listening on http://localhost:${PORT}`);
-// });
-
-module.exports.handler = serverless(app);
+app.listen(PORT, () => {
+    console.log(`App is listening on http://localhost:${PORT}`);
+});
